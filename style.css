@@ -1,0 +1,302 @@
+html,body{
+	margin: 0px;
+	padding: 0px;
+	background-color: gray;
+}
+/*header*/
+	li{
+		list-style-type: none;
+	}
+	header{
+		background-color:  rgba(5, 200, 255, 1);
+		position: fixed;
+		margin-top:-80px;		
+		width: 100%;	
+		padding: 5px 0
+	}
+	header ul.menu li{			
+		list-style-type: none;	
+	}
+	.icon-kiri{		
+		float: left;
+		margin-left:-20px;
+		width: 33.3%;		
+	}
+	.icon-tengah{
+		float: left;		
+		width: 33.3%;				
+	}
+	.icon-kanan{		
+		float: right;
+		width: 33.3%;	
+		margin-right: 20px;	
+	}
+	.gambar-menu{
+		width: 50px;
+	}
+	.gambar{			
+		width: 50px;		
+		border-radius: 50%;		
+	}
+	.gambar:hover{
+		background-color: white;		
+		border-radius: 50%	
+	}
+	.active{
+		background-color: white;		
+	}
+	.icon-kiri:hover{
+		border-radius: 3px;		
+	}
+	.icon-kanan:hover{
+		border-radius: 3px;		
+	}
+	#navigasi_list{
+		border-top: 2px solid black;		
+	    display: none;
+	    list-style: none;
+	    margin-left: 0;
+	    padding-left: 0;	      
+	}
+	#navigasi_list.expanded {
+	    display: list-item;
+	    margin-top: 85px;
+	    margin-left: 0;	       
+	}
+	#navigasi_list li{
+    	padding: 5px;     
+	}
+	#navigasi_list li a{
+	    color: white;
+	    text-decoration: none;
+	    padding: 5px;
+	    font-size: 18px;
+	    font-weight: bold;
+	}
+	#navigasi_list li a:hover{
+	    color: black
+	}
+	#navigasi_list li a.active{
+	    color: black;
+	}   
+/*header*/
+
+/*content*/
+	.content{
+		width: 100%;
+		height: 100px;	
+		padding-top: 30px;		
+		margin-top: 80px;
+		height: 700px;
+	}
+
+	/*----- Tabs -----*/
+	.tabs {
+	    width:100%;    
+	    padding: 0px;
+	    margin: 0px;
+	}
+ 
+    /*----- Tab Links -----*/
+    /* Clearfix */
+    .tab-links:after {
+        display:block;
+        clear:both;
+        content:'';
+    }
+ 	.tab-links {
+		float: left;
+		width: 18%;		
+	}
+    .tab-links li {	        
+        width: 100%;	              
+        list-style:none;
+        padding: 5px 0;
+        margin: 5px 0;
+        background-color:  rgba(5, 200, 255, 1);
+        margin-left: -5px;
+	}
+	.tab-links li:hover {	        
+        background-color: white;
+	}
+	.tab-links li:hover a{
+		color: black
+	}
+    .tab-links a {        
+        color:white;       
+        transition:all linear 0.15s;
+        width: 150px;        
+        text-decoration: none;
+        padding: 5px 100px;        
+    }
+ 
+    li.active a, li.active a:hover {        
+        color:black;
+    }
+ 
+    /*----- Content of Tabs -----*/
+    .tab-content {        
+        border-radius:3px;        
+        background-color:  rgba(5, 200, 255, 1);
+        width: 73%;        
+        float: left;
+        height: auto;
+        padding-bottom: 50px;	
+        margin-bottom: 100px
+    }
+
+    	.detail_kendaraan{
+    		padding: 0px;
+    	}
+    	.detail_kendaraan li{			
+			background-color: white;
+			width: 23%;
+			margin: 5px 1%;			
+			padding: 5px 0;
+			float: left;			
+			color: black;
+		}
+		.detail_kendaraan li a{
+			text-decoration: none;	
+			color: black
+		}
+		.detail_kendaraan li a:hover{
+			color: gray
+		}
+ 
+        .tab {
+            display:none;
+        }
+ 
+        .tab.active {
+            display:block;
+        }
+
+        .gambar-info{
+        	width: 50%;
+        }
+        .info{
+        	text-align: left;
+        	width: 70%
+        }
+        .login{        	
+        	width: 50%
+        }
+        .login li{
+        	margin: 5px 0;
+        }
+/*-----END TAB-----*/
+	
+/*content*/
+
+/*footer*/
+	footer{		
+		background-color:  rgba(5, 200, 255, 1);		
+		position: fixed;		
+		bottom: 0;
+		width: 100%;		
+	}
+	footer ul.menu li{	
+		list-style-type: none;	
+	}
+/*footer*/
+
+/*android*/	
+	@media screen and (max-width: 600px) {
+		/*header*/
+		header{		
+		position: fixed;
+		margin-top:-80px;
+		padding-bottom: 5px;
+		width: 100%;	
+		}
+		.icon-kiri{		
+			float: left;
+			margin-left:-20px;
+			width: 33.3%;			
+		}
+		.icon-tengah{
+			float: left;		
+			width: 33.3%;				
+		}
+		.icon-kanan{		
+			float: right;
+			width: 33.3%;	
+			margin-right: 20px;	
+		}
+		.gambar{
+			width: 40px;
+		}
+		.gambar-menu{
+			width: 40px
+		}
+		#navigasi_list.expanded {
+		    display: list-item;
+		    margin-top: 60px;
+		    margin-left: 0;      
+		}
+
+		#navigasi_list li a{		    
+		    text-decoration: none;
+		    padding: 5px;
+		    font-size: 14px;
+	    }
+		/*header*/
+		
+		/*content*/
+		.content{
+			margin-bottom: 300px
+		}
+		.tab-links{
+			width: 100%;
+			padding: 0;			
+		}
+		.tab-links li {	        
+	        width: 30%;
+	        float:left;	        
+	        list-style:none;
+	        margin-left: 7px;
+    	}
+    	.tab-links a {        
+    		border-radius:3px 3px 0px 0px;     		
+            display:inline-block;                        
+            font-size:14px;                                   
+            transition:all linear 0.15s;     
+            width: 100%;      
+            text-decoration: none;
+            float:left;               
+        }
+    	.tab-content{
+    		float: left;
+    		width: 100%;  
+    	}  
+    	.detail_kendaraan{
+    		padding: 0px;
+    	}
+    	.detail_kendaraan li{			
+			width: 46%;
+			margin: 5px 2%;
+			float: left;						
+		}		
+		.gambar-info{
+        	width: 90%;
+        }
+        .info{
+        	width: 98%;
+        	text-align: left;
+        	padding: 0 1%;
+        	
+        }
+        .login{        	
+        	width: 100%;        	
+        }
+        .login li{
+        	margin: 5px 0;
+        }
+		/*content*/
+
+
+
+	}
+/*footer*/
+	
