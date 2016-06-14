@@ -13,6 +13,7 @@
 		
 		//$tambah_angkot = $angkot->tambah("mb","12", "pelaminan","jingga");
 		$daftar_admin = $admin->tampil();
+<<<<<<< HEAD
 		$daftar_angkot = $angkot->tampil();	
 		$daftar_users = $users->tampil();	
 		$daftar_wisata = $wisata->tampil();	
@@ -20,6 +21,11 @@
 
 		?>	
 		<h1>Daftar Admin</h1>
+=======
+		$daftar_angkot = $angkot->tampil();		
+
+		?>	
+>>>>>>> 6bff890290ca1410a22208c720c929a9c5b710b8
 		<a href="form_tambah_admin.php">Tambah Admin</a>
 		<table border="1">
 			<thead>
@@ -40,6 +46,7 @@
 			</tbody>
 		</table>
 
+<<<<<<< HEAD
 		<h1>Daftar User</h1>
 		<table border="1">
 			<thead>
@@ -63,6 +70,8 @@
 		</table>
 
 		<h1>Daftar Angkot</h1>
+=======
+>>>>>>> 6bff890290ca1410a22208c720c929a9c5b710b8
 		<a href="form_tambah_angkot.php">Tambah Angkot</a>
 		<table border="1">
 			<thead>
@@ -91,6 +100,7 @@
 		</table>
 
 
+<<<<<<< HEAD
 		<h1>Daftar Wisata</h1>
 		<a href="form_tambah_wisata.php">Tambah Wisata</a>
 		<table border="1">
@@ -120,6 +130,8 @@
 		</table>
 
 
+=======
+>>>>>>> 6bff890290ca1410a22208c720c929a9c5b710b8
 	<?php
 	}
 	else {

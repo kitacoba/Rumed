@@ -12,11 +12,21 @@ function antiinjection($data){
     return $filter_sql;
 }
 $adminame	=  mysql_real_escape_string(strtolower(trim(isset($_POST['adminame'])? $_POST['adminame'] : '')));
+<<<<<<< HEAD
 $adminpass	= $_POST['adminpass'];
 $query = "SELECT * FROM admin WHERE lower(adminame)='$adminame' AND adminpass='$adminpass' ";
 $login = $koneksi->query($query);
 $row = $login->num_rows;
 $data = $login->fetch_assoc();
+=======
+$adminpass	= isset($_POST['adminpass']) ? md5($_POST['adminpass']) : '';
+$query = "SELECT * FROM admin WHERE lower(adminame)='$adminame' AND adminpass='$adminpass' ";
+
+$login = $koneksi->query($query);
+$row = $login->num_rows;
+$data = $login->fetch_assoc();
+
+>>>>>>> 6bff890290ca1410a22208c720c929a9c5b710b8
 if($row > 0){
 	session_start();
 	$_SESSION['kunci'] = md5(time());

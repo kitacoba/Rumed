@@ -127,7 +127,11 @@ html,body{
         transition:all linear 0.15s;
         width: 150px;        
         text-decoration: none;
+<<<<<<< HEAD
         padding: 5px 0px;        
+=======
+        padding: 5px 100px;        
+>>>>>>> 6bff890290ca1410a22208c720c929a9c5b710b8
     }
  
     li.active a, li.active a:hover {        
@@ -173,7 +177,11 @@ html,body{
         }
 
         .gambar-info{
+<<<<<<< HEAD
         	width: 40%;
+=======
+        	width: 50%;
+>>>>>>> 6bff890290ca1410a22208c720c929a9c5b710b8
         }
         .info{
         	text-align: left;

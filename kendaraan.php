@@ -36,6 +36,7 @@
 <body>
 <?php
 	include 'config/koneksi.php';
+<<<<<<< HEAD
 	session_start();
 	if (!empty($_SESSION['username'])) {		
 	}
@@ -43,17 +44,27 @@
 	{
 		header('location:index.php');
 	}
+=======
+>>>>>>> 6bff890290ca1410a22208c720c929a9c5b710b8
 ?>
 <div id="container">
 	<header>
 		<ul class="menu">
 			<li class="icon-kiri"><a href="menu_button" class="menu-nav" onclick="toggleMenu(); return false;"><img src="image/menu2.png" class="gambar-menu"></a></li>
 			<li class="icon-tengah"><center><img src="image/kendaraan.png" class="gambar-menu"></center></li>
+<<<<<<< HEAD
 			<li class="icon-kanan"><a href="user.php"><img src="image/user.png" class="gambar"style="float:right" ></a></li>
 		</ul>
 		<ul id="navigasi_list" style="border-top:2px solid black">
           <li><a href="kendaraan.php">Kendaraan</a></li>        
           <li><a href="wisata.php">Wistata</a></li>
+=======
+			<li class="icon-kanan"><a href="user_login.php"><img src="image/user.png" class="gambar"style="float:right" ></a></li>
+		</ul>
+		<ul id="navigasi_list" style="border-top:2px solid black">
+          <li><a href="kendaraan.php">Kendaraan</a></li>        
+          <li><a href="#footer_nav1">Wistata</a></li>
+>>>>>>> 6bff890290ca1410a22208c720c929a9c5b710b8
           <li><a href="#footer_nav1">Oleh-oleh</a></li>          
         </ul>   
 	</header>

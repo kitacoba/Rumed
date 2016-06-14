@@ -6,7 +6,11 @@ class Database
 	protected $dbHost = "localhost";
 	protected $dbUser = "root";
 	protected $dbPass = "";
+<<<<<<< HEAD
 	protected $dbName = "rumed";	
+=======
+	protected $dbName = "amed";	
+>>>>>>> 6bff890290ca1410a22208c720c929a9c5b710b8
 
 	function sambung()
 	{
@@ -59,6 +63,7 @@ class Users
 	{
 		$this->mysqli = $koneksinya;
 	}
+<<<<<<< HEAD
 	function tampil()
 	{
 		$ambil = $this->mysqli->query("SELECT * FROM users");
@@ -68,6 +73,8 @@ class Users
 		}
 		return $output;
 	}
+=======
+>>>>>>> 6bff890290ca1410a22208c720c929a9c5b710b8
 	function tambah($username,$nama,$password,$alamat,$email)
 	{
 		$sql_cek	= "SELECT username FROM users WHERE username='$username'";
@@ -155,6 +162,7 @@ class Angkot
 	}
 }
 
+<<<<<<< HEAD
 class Wisata
 {
 	
@@ -218,6 +226,8 @@ class Wisata
 	}
 }
 
+=======
+>>>>>>> 6bff890290ca1410a22208c720c929a9c5b710b8
 
 //untuk koneksi
 $db = new Database();
@@ -225,7 +235,10 @@ $koneksi = $db->sambung();
 $admin = new Admin($koneksi);
 $angkot = new Angkot($koneksi);
 $users = new Users($koneksi);
+<<<<<<< HEAD
 $wisata = new Wisata($koneksi);
+=======
+>>>>>>> 6bff890290ca1410a22208c720c929a9c5b710b8
 /*$data_admin = $admin->tampil();
 
 echo "<pre>";

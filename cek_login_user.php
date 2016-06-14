@@ -24,10 +24,17 @@ if($row > 0){
 	$_SESSION['kunci'] = md5(time());
     $_SESSION['username']=$data['username'];
     $_SESSION['nama']=$data['nama'];
+<<<<<<< HEAD
     header('location:home.php');
 }
 else{
 	header('location:index.php');	
+=======
+    header('location:users/index.php');
+}
+else{
+	header('location:user_login.php');	
+>>>>>>> 6bff890290ca1410a22208c720c929a9c5b710b8
 }
 ?>
 </body>
