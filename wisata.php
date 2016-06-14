@@ -51,9 +51,9 @@
 			<li class="icon-tengah"><center><img src="image/kendaraan.png" class="gambar-menu"></center></li>
 			<li class="icon-kanan"><a href="user.php"><img src="image/user.png" class="gambar"style="float:right" ></a></li>
 		</ul>
-		<ul id="navigasi_list">
+		<ul id="navigasi_list" style="border-top:2px solid black">
           <li><a href="kendaraan.php">Kendaraan</a></li>        
-          <li><a href="wisata.php">Wistata</a></li>
+          <li><a href="#footer_nav1">Wistata</a></li>
           <li><a href="#footer_nav1">Oleh-oleh</a></li>          
         </ul>   
 	</header>
@@ -61,9 +61,10 @@
 		<div class="tabs">
 		    <ul class="tab-links">
 		    <center>
-		        <li class="active"><a href="#tab1">ANGKOT</a></li>
-		        <li><a href="#tab2">TAKSI</a></li>
-		        <li><a href="#tab3">DAMRI</a></li>		        
+		    	<li style="background-color:white;color:black;">WISATA</li>
+		        <li class="active"><a href="#tab1">KULINER</a></li>
+		        <li><a href="#tab2">BAHARI</a></li>
+		        <li><a href="#tab3">BUDAYA</a></li>		        
 		    </center>
 		    </ul>
 
@@ -72,15 +73,12 @@
 		        <div id="tab1" class="tab active">
 		            <p>
 		            	<?php 
-		            		$asal = $_GET['asal'];
-		            		$tujuan = $_GET['tujuan'];
-		            		//Masih Jadi Masalah
-		            		$sql = "SELECT * FROM angkot a INNER JOIN detail_angkot d on a.id = d.kode_angkot WHERE trayek LIKE '%$asal%' and trayek LIKE'%$tujuan%' OR trayek LIKE '%$asal, medan%' and trayek LIKE'%$tujuan, medan%' ORDER BY kode_angkot";
+		            		$sql = "SELECT * FROM detail_wisata WHERE jenis = 1";
 		            		$hasil = $koneksi->query($sql);
-		            		while ($row = $hasil->fetch_array()) {
+		            		while ($row = $hasil->fetch_assoc()) {
 		            			echo "<ul class=\"detail_kendaraan\">
-		            					<li>".$row['nama']." ".$row['nomor']."<br>
-		            						<a href=\"detail_kendaraan.php?nomor=".$row['nomor']."\">Detail</a> 
+		            					<li>".$row['nama']." ".$row['lokasi']."<br>
+		            						<a href=\"detail_wisata.php?id=".$row['id']."\">Detail</a> 
 		            					</li>
 		            				 </ul>";
 		            		}
@@ -89,13 +87,36 @@
 		        </div>		        
 
 		        <div id="tab2" class="tab">
-		            <p>Tab #2 content goes here!</p>
-		            <p>Donec pulvinar neque sed semper lacinia. Curabitur lacinia ullamcorper nibh; quis imperdiet velit eleifend ac. Donec blandit mauris eget aliquet lacinia! Donec pulvinar massa interdum risus ornare mollis. In hac habitasse platea dictumst. Ut euismod tempus hendrerit. Morbi ut adipiscing nisi. Etiam rutrum sodales gravida! Aliquam tellus orci, iaculis vel.</p>
+		            <p>
+		            	<?php 
+		            		$sql = "SELECT * FROM detail_wisata WHERE jenis = 2";
+		            		$hasil = $koneksi->query($sql);
+		            		while ($row = $hasil->fetch_assoc()) {
+		            			echo "<ul class=\"detail_kendaraan\">
+		            					<li>".$row['nama']." ".$row['lokasi']."<br>
+		            						<a href=\"detail_wisata.php?id=".$row['id']."\">Detail</a> 
+		            					</li>
+		            				 </ul>";
+		            		}
+		            	?>
+		            </p>
+		            
 		        </div>
 
 		        <div id="tab3" class="tab">
-		            <p>Tab #3 content goes here!</p>
-		            <p>Donec pulvinar neque sed semper lacinia. Curabitur lacinia ullamcorper nibh; quis imperdiet velit eleifend ac. Donec blandit mauris eget aliquet lacinia! Donec pulvinar massa interdum ri.</p>
+		            <p>
+		            	<?php 
+		            		$sql = "SELECT * FROM detail_wisata WHERE jenis = 3";
+		            		$hasil = $koneksi->query($sql);
+		            		while ($row = $hasil->fetch_assoc()) {
+		            			echo "<ul class=\"detail_kendaraan\">
+		            					<li>".$row['nama']." ".$row['lokasi']."<br>
+		            						<a href=\"detail_wisata.php?id=".$row['id']."\">Detail</a> 
+		            					</li>
+		            				 </ul>";
+		            		}
+		            	?>
+		            </p>		            
 		        </div>
 		    </center>
 		    </div>
@@ -104,7 +125,7 @@
 	<footer>
 		<ul class="menu">
 			<li class="icon-kiri"><a href="index.php"><img src="image/home.png" class="gambar"></a></li >
-			<li class="icon-tengah"><a href="informasi.php"><center><img src="image/home.png" class="gambar" ></center></a></li>
+			<li class="icon-tengah"><a href="informasi.php"><center><img src="image/info.png" class="gambar" ></center></a></li>
 			<li class="icon-kanan"><a href=""><img src="image/setting.png" class="gambar"style="float:right"></a></li>
 		</ul>
 	</footer>

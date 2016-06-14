@@ -59,6 +59,15 @@ class Users
 	{
 		$this->mysqli = $koneksinya;
 	}
+	function tampil()
+	{
+		$ambil = $this->mysqli->query("SELECT * FROM users");
+		$output = array();
+		while ($data = $ambil->fetch_assoc()) {
+			$output[] = $data;
+		}
+		return $output;
+	}
 	function tambah($username,$nama,$password,$alamat,$email)
 	{
 		$sql_cek	= "SELECT username FROM users WHERE username='$username'";
@@ -146,6 +155,69 @@ class Angkot
 	}
 }
 
+class Wisata
+{
+	
+	function __construct($koneksinya)
+	{
+		$this->mysqli = $koneksinya;
+	}
+	function tampil()
+	{
+		$ambil = $this->mysqli->query("SELECT * FROM wisata w INNER JOIN detail_wisata d ON w.id = d.jenis");
+		$output = array();
+		while ($data = $ambil->fetch_assoc()) {
+			$output[] = $data;
+		}
+		return $output;
+	}
+	function tambah($nama, $lokasi, $biaya_masuk,$jenis)
+	{
+		
+		$sql = "INSERT INTO detail_wisata(nama,lokasi,biaya_masuk, jenis) VALUES ('$nama', '$lokasi', '$biaya_masuk','$jenis')";
+		$hasil = $this->mysqli->query($sql);
+		if($hasil)
+		{
+			echo "Add Data Wisata Success";
+		}
+		else
+			echo "Add Data Wisata Failed";
+	}	
+	function update($nama, $lokasi, $biaya_masuk,$jenis,$id)
+	{
+		$sql = "UPDATE detail_wisata SET nama='$nama',lokasi='$lokasi',biaya_masuk='$biaya_masuk',jenis='$jenis' WHERE id='$id' ";
+		$hasil = $this->mysqli->query($sql);
+		if($hasil)
+		{
+			echo "Update Data Wisata Success";
+		}
+		else
+			echo "Update Data Wisata Failed";
+	}
+	function kode()
+	{
+		$ambil = $this->mysqli->query("SELECT * FROM wisata ");
+		$output = array();
+		while ($data = $ambil->fetch_assoc()) {
+			$output[] = $data;
+		}
+		return $output;
+	}
+	function hapus($id)
+	{
+
+		$hapus = $this->mysqli->query("DELETE FROM detail_wisata WHERE id='$id'");	
+		if($hapus)
+		{
+			echo "Hapus Data Detail Wisata Sukses";
+		}		
+		else
+		{
+			echo "Gagal" ;			
+		}
+	}
+}
+
 
 //untuk koneksi
 $db = new Database();
@@ -153,6 +225,7 @@ $koneksi = $db->sambung();
 $admin = new Admin($koneksi);
 $angkot = new Angkot($koneksi);
 $users = new Users($koneksi);
+$wisata = new Wisata($koneksi);
 /*$data_admin = $admin->tampil();
 
 echo "<pre>";

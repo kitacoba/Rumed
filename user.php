@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Kendaraan</title>
+	<title>User</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	</style>
 <script type="text/javascript" src="jquery-1.11.0.min.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function() {
@@ -34,21 +36,12 @@
 </script>
 </head>
 <body>
-<?php
-	include 'config/koneksi.php';
-	session_start();
-	if (!empty($_SESSION['username'])) {		
-	}
-	else
-	{
-		header('location:index.php');
-	}
-?>
+
 <div id="container">
 	<header>
 		<ul class="menu">
 			<li class="icon-kiri"><a href="menu_button" class="menu-nav" onclick="toggleMenu(); return false;"><img src="image/menu2.png" class="gambar-menu"></a></li>
-			<li class="icon-tengah"><center><img src="image/kendaraan.png" class="gambar-menu"></center></li>
+			<li class="icon-tengah"><center><img src="image/user.png" class="gambar-menu"></center></li>
 			<li class="icon-kanan"><a href="user.php"><img src="image/user.png" class="gambar"style="float:right" ></a></li>
 		</ul>
 		<ul id="navigasi_list" style="border-top:2px solid black">
@@ -58,33 +51,19 @@
         </ul>   
 	</header>
 	<div class="content">
-		<div class="tabs">
-		    <ul class="tab-links">
-		    <center>
-		        <li class="active"><a href="kendaraan.php?#tab1">ANGKOT</a></li>
-		        <li><a href="#tab2">TAKSI</a></li>
-		        <li><a href="#tab3">DAMRI</a></li>		        
-		    </center>
-		    </ul>
-
-		    <div class="tab-content">
-		    <center>
-
-		        <?php		        
-		        	$nomor = $_GET['nomor'];		        			        	
-		        	$sql = "SELECT nomor,trayek,warna,nama FROM detail_angkot d INNER JOIN angkot a ON d.kode_angkot = a.id  WHERE $nomor=nomor ";
-		        	$hasil = $koneksi->query($sql);
-		        	$row = $hasil->fetch_assoc();
-		        	echo "<h1>".$row['nama']."</h1><br>
-		        		  <p><b>Nomor : ".$row['nomor']."<b></p>
-		        		  <p><b>Warna : ".$row['warna']."<b></p>		        		  
-		        		  <p><b>Trayek : ".$row['trayek']."<b></p>
-		        		";
-		        ?>
-		        
-		    </center>
-		    </div>
-		</div>
+	<center>	
+	<?php
+	session_start();
+	if (!empty($_SESSION['username'])) {
+		echo $_SESSION['nama'];	
+	}
+	else
+	{
+		header('location:index.php');
+	}
+	?>
+		<h2><a href="user_logout.php"><img src="image/logout.png"></a></h2>		
+	</center>	
 	</div>
 	<footer>
 		<ul class="menu">
@@ -98,3 +77,4 @@
 
 </body>
 </html>
+
