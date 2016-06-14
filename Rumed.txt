@@ -1,0 +1,13 @@
+
+1. Rumed adalah sebuah aplikasi navigasi berbasis web untuk keperluan masyarakat dalam menggunakan transportasi umum, dalam kata lain memudahkan masyarakat mencari transportasi umum yang sesuai dengan tujuan masyarakat tersebuut.
+
+2. Tampilan Aplikasi Rumed dimana ada menu di pojok kiri atas yang berisi menu kendaraan, dan menu wisata, selain itu ada menu informasi tentang jalanan di kota medan yang terletak di posisi tengah bawah, dan yang paling penting dalam pencarian lokasi dan kendaraan terdapat 2 inputan atau masukan yang diminta aplikasi untuk menemukan tujuan user atau pengguna
+
+3 di dalam Menu Kendaraan terdapat sejumlah Data/Info Kendaraan yang bekerja sama dengan Aplikasi Rumed ini seperti angkot, Taksi dan Damri, dimana Angkot kita bisa melihat trayek dan detail angkot tersebut, untuk Taksi User atau Pengguna dapat memesan Taksi tersebut melalui Aplikasi ini, dan Damri User Hanya bisa melihat Waktu keberangkatan dan Tarif Damri tersebut
+
+4. di dalam Menu Wisata terdapat sejumlah Data/Info Wisata yang ada di kota Medan, Jenis Wisatanya antara lain, Wisata Kuliner, Wisata Bahari, dan Wisata Budaya, yang bisa dilihat detailnya pada menu wisata ini
+
+5. Menu Informasi jalanan berisi Info terbaru tentang jalanan di kota medan yang akan terus di update oleh admin aplikasi
+
+5. dan Semua Fitur yang ada di dalam Aplikasi Rumed tidak akan bisa digunakan sebelum User atau pengguna Login
+
